@@ -33,4 +33,17 @@ async def mem(ctx):
    # Daha sonra bu dosyayı bir parametre olarak gönderebiliriz!
     await ctx.send(file=picture)
 
+@bot.command()
+async def scemer(ctx):
+    await ctx.send('<:scemer:1355236581992304700>')
+
+oneriler = ["pet şişeleri saksı yapabilirsiniz",
+         "plastik ve metal atıkları birleştirip süs eşyası olarak kullanabilirsiniz",
+         "ilaç kutusunu kürdan ve pet şişe kapağı ile araba modeline çevirebilirsiniz",
+         "gıda atıklarını toplatıp gübre olarak kullanabilirsiniz", "kırık cam parçalarından sanat icra edebilirsin"]
+
+@bot.command()
+async def oneri(ctx):
+    await ctx.send(random.choice(oneriler))
+
 bot.run("token girin")
